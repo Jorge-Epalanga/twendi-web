@@ -9,6 +9,10 @@ import driver from '@/assets/driver.jpeg';
 import Footer from '@/components/layout/Footer';
 import van from '@/assets/van_and_delivery_boxes.jpg';
 import twendiDriver from '@/assets/twendi_driver.jpg';
+import moto from '@/assets/twendi_moto_no_bg.png';
+import smallCar from '@/assets/twendi_small.png';
+import mediumCar from '@/assets/twendi_comfort.png';
+import bigCar from '@/assets/twendi_x.png';
 
 const StepItem = ({ number, text }: { number: string; text: string }) => (
   <div className="w-full flex gap-6 items-center bg-primary-10 p-4">
@@ -39,13 +43,20 @@ const BeDriverBtn = ({
 
 const RequisiteOfCategory = ({
   categoryName,
+  src,
+  alt,
   children,
 }: {
   categoryName: string;
+  src?: string;
+  alt?: string;
   children: ReactNode;
 }) => (
-  <div className="w-full h-auto flex flex-col gap-12 p-2 rounded-xl border border-primary-920 items-center">
-    <h2 className="font-extrabold text-xl">{categoryName}</h2>
+  <div className="w-full h-auto flex flex-col gap-4 p-2 rounded-xl border border-primary-920 items-center">
+    <div className="w-full flex flex-col gap-1 items-center justify-center">
+      <img src={src} alt={alt} className="w-24 h-24" />
+      <h2 className="font-extrabold text-base">{categoryName}</h2>
+    </div>
     <button className="group relative w-full flex items-center justify-center font-bold text-sm">
       <span>Ver Requisitos</span>
       <ChevronDown />
@@ -85,7 +96,7 @@ const Drivers = () => {
         />
         <Section
           style="bg-primary-30 flex-col-reverse md:flex-row-reverse gap-5 md:gap-14 lg:gap-16"
-          title="Tem um veículo maior?, seja parceiro Twendi!"
+          title="Tem um veículo maior ou uma moto de 3 rodas?, seja parceiro Twendi!"
           text="Torne-se parceiro Twendi e ganhe dinheiro fazendo entregas ou 
           levando imóveis e mercadorias de pessoas, negócios ou empresas."
           to="https:play.google.com"
@@ -116,7 +127,7 @@ const Drivers = () => {
           />
           <StepItem
             number="4"
-            text="Escolha a sua categoria, como: Twendi Basic, Twendi Plus, Twendi Moto, etc."
+            text="Escolha a sua categoria, como: Twendi Small, Twendi Comfort, Twendi Moto, etc."
           />
           <StepItem
             number="5"
@@ -150,6 +161,8 @@ const Drivers = () => {
         <div className="w-full gap-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center px-3 py-10 md:px-14 md:py-16 bg-primary-10">
           <RequisiteOfCategory
             categoryName="Twendi Moto"
+            src={moto}
+            alt="Imagem uma Moto Preta"
             children={
               <p className="font-semibold">
                 Pelo menos 2 Capassetes, e no máximo 2 passageiros.
@@ -158,6 +171,8 @@ const Drivers = () => {
           />
           <RequisiteOfCategory
             categoryName="Twendi Small"
+            src={smallCar}
+            alt="Imagem um carro da Twendi pequeno"
             children={
               <p className="font-semibold">
                 Viaturas ligeiras com níveis básico de conforto e estado técnico
@@ -166,6 +181,8 @@ const Drivers = () => {
           />
           <RequisiteOfCategory
             categoryName="Twendi Comfort"
+            src={mediumCar}
+            alt="Imagem um carro da Twendi médio"
             children={
               <p className="font-semibold">
                 Viaturas de tipo jeep com tração e níveis médio de conforto e
@@ -175,6 +192,8 @@ const Drivers = () => {
           />
           <RequisiteOfCategory
             categoryName="Twendi X"
+            src={bigCar}
+            alt="Imagem um carro da Twendi 4x4"
             children={
               <p className="font-semibold">
                 Viaturas de tipo jeep com tração 4×4, altos níveis de
