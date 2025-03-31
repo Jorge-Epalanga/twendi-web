@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* COLORS */
+  --color-primary-10: oklch(100% 0 0);
+  --color-primary-20: oklch(97.91% 0 0);
+  --color-primary-30: oklch(96.12% 0 0);
+  --color-primary-40: oklch(94.01% 0 0);
+  --color-primary-50: oklch(92.19% 0 0);
+  --color-primary-60: oklch(90.06% 0 0);
+  --color-primary-70: oklch(88.22% 0 0);
+  --color-primary-80: oklch(86.07% 0 0);
+  --color-primary-90: oklch(84.21% 0 0);
+  --color-primary-100: oklch(82.03% 0 0);
+  --color-primary-200: oklch(80.15% 0 0);
+  --color-primary-300: oklch(74.12% 0 0);
+  --color-primary-400: oklch(67.97% 0 0);
+  --color-primary-500: oklch(61.67% 0 0);
+  --color-primary-600: oklch(55.21% 0 0);
+  --color-primary-700: oklch(48.55% 0 0);
+  --color-primary-800: oklch(41.65% 0 0);
+  --color-primary-900: oklch(34.46% 0 0);
+  --color-primary-910: oklch(26.86% 0 0);
+  --color-primary-920: oklch(18.67% 0 0);
+  --color-primary-930: oklch(17.22% 0 0);
+  --color-primary-940: oklch(16.76% 0 0);
+  --color-primary-950: oklch(15.22% 0 0);
+  --color-primary-960: oklch(14.22% 0 0);
+  --color-primary-970: oklch(13.22% 0 0);
+  --color-primary-980: oklch(12.22% 0 0);
+  --color-primary-990: oklch(0% 0 0);
+
+  --color-success-100: oklch(98.59% 0.0213 154.14);
+  --color-success-200: oklch(93.08% 0.0664 154.9);
+  --color-success-300: oklch(86.19% 0.1028 154.84);
+  --color-success-400: oklch(78.6% 0.1379 154.52);
+  --color-success-500: oklch(63.42% 0.1283 156.2);
+  --color-success-600: oklch(55.32% 0.1067 157.99);
+  --color-success-700: oklch(46.35% 0.0823 160.17);
+  --color-success-800: oklch(40.43% 0.0671 161.21);
+  --color-success-900: oklch(35.48% 0.0574 161.28);
+
+  --color-danger-100: oklch(97.79% 0.0107 17.34);
+  --color-danger-200: oklch(91.2% 0.0437 17.98);
+  --color-danger-300: oklch(83.54% 0.0892 19.12);
+  --color-danger-400: oklch(74.21% 0.1503 21.35);
+  --color-danger-500: oklch(68.82% 0.1776 22.95);
+  --color-danger-600: oklch(61.37% 0.2039 25.56);
+  --color-danger-700: oklch(54.41% 0.1859 25.95);
+  --color-danger-800: oklch(46.5% 0.147 24.94);
+  --color-danger-900: oklch(39.37% 0.1047 23.19);
+
+  --color-warning-100: oklch(98.69% 0.0214 95.28);
+  --color-warning-200: oklch(96.19% 0.058 95.62);
+  --color-warning-300: oklch(92.43% 0.1151 95.75);
+  --color-warning-400: oklch(86.06% 0.1731 91.94);
+  --color-warning-500: oklch(79.52% 0.1617 86.05);
+  --color-warning-600: oklch(68.06% 0.1423 75.83);
+  --color-warning-700: oklch(55.38% 0.1207 66.44);
+  --color-warning-800: oklch(47.62% 0.1034 61.91);
+  --color-warning-900: oklch(42.1% 0.0897 57.71);
+
+  --color-general-100: oklch(65.2% 0.1901 253.21);
+  --color-general-200: oklch(55.41% 0.1607 253.18)
+  --color-general-300: oklch(55.98% 0.1882 266.4);
+  --color-general-400: oklch(62.79% 0.2039 254.69);
+
+  /* FONTS */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+}
+
+body {
+  background-color: white;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+}
